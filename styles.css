@@ -1,0 +1,489 @@
+/* Kawaii Study Planner - Premium CSS Styles */
+
+/* Color Palette */
+:root {
+    --sakura-pink: #FFD6E7;
+    --lavender: #E6D6FF;
+    --baby-blue: #D6F0FF;
+    --mint-green: #D8FFE3;
+    --cream-white: #FFF9F3;
+    --peach: #FFE4CC;
+    --dark-bg: #2A1F3D;
+    --dark-card: #3A2F4D;
+    --text-dark: #2C2C2C;
+    --text-light: #FFFFFF;
+    --border-light: #FFE4E6;
+    --shadow-soft: 0 4px 15px rgba(255, 214, 231, 0.15);
+    --shadow-medium: 0 8px 25px rgba(230, 214, 255, 0.2);
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background: linear-gradient(135deg, #FFF9F3 0%, #FFE6F0 50%, #F0E6FF 100%) !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    color: var(--text-dark) !important;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    background: linear-gradient(135deg, #1A0F2E 0%, #2A1F3D 50%, #1F1530 100%) !important;
+    color: var(--text-light) !important;
+}
+
+/* Streamlit Overrides */
+.stApp {
+    background: transparent !important;
+}
+
+.stSidebar {
+    background: linear-gradient(180deg, #FFE6F0 0%, #F0E6FF 100%) !important;
+    border-right: 2px solid var(--sakura-pink);
+}
+
+.stSidebar [data-testid="stVerticalBlock"] > [style*="flex-direction"] > button {
+    background: linear-gradient(135deg, var(--sakura-pink), var(--peach)) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stSidebar [data-testid="stVerticalBlock"] > [style*="flex-direction"] > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(255, 214, 231, 0.4) !important;
+}
+
+/* Text Elements */
+h1 {
+    color: var(--sakura-pink) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px !important;
+    text-shadow: 0 2px 4px rgba(255, 214, 231, 0.1);
+}
+
+h2 {
+    color: var(--lavender) !important;
+    font-weight: 700 !important;
+    margin-top: 1.5em !important;
+}
+
+h3 {
+    color: var(--sakura-pink) !important;
+    font-weight: 600 !important;
+}
+
+h4 {
+    color: var(--lavender) !important;
+    font-weight: 600 !important;
+}
+
+/* Landing Page */
+.landing-hero {
+    text-align: center;
+    padding: 3em 2em;
+    background: linear-gradient(135deg, rgba(255, 214, 231, 0.3), rgba(230, 214, 255, 0.3));
+    border-radius: 20px;
+    margin-bottom: 2em;
+    border: 2px solid var(--border-light);
+    animation: fadeIn 0.8s ease;
+}
+
+.feature-highlight {
+    background: linear-gradient(135deg, var(--cream-white), var(--peach));
+    padding: 1.5em;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    border: 2px solid var(--sakura-pink);
+}
+
+.feature-highlight:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.feature-highlight h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.mascot-container {
+    background: linear-gradient(135deg, var(--baby-blue), var(--mint-green));
+    padding: 2em;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+    border: 3px solid var(--lavender);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Dashboard Widgets */
+.dashboard-widget {
+    background: linear-gradient(135deg, var(--cream-white), var(--peach));
+    padding: 1.5em;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border: 2px solid var(--sakura-pink);
+    transition: all 0.3s ease;
+    animation: slideUp 0.6s ease;
+}
+
+.dashboard-widget:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-medium);
+}
+
+.widget-label {
+    color: var(--text-dark);
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: 0.5em 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.widget-value {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--sakura-pink);
+    margin-top: 0.5em;
+}
+
+/* Subject Cards */
+.subject-card {
+    background: linear-gradient(135deg, var(--cream-white), rgba(255, 214, 231, 0.2));
+    border: 2px solid var(--sakura-pink);
+    border-radius: 15px;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.subject-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--lavender);
+    background: linear-gradient(135deg, var(--peach), rgba(214, 240, 255, 0.3));
+}
+
+.card-header {
+    padding-bottom: 1em;
+    border-bottom: 2px solid var(--sakura-pink);
+    margin-bottom: 1em;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0;
+}
+
+.card-label {
+    font-weight: 600;
+    color: var(--lavender);
+    font-size: 0.95em;
+}
+
+.card-value {
+    color: var(--text-dark);
+    font-weight: 700;
+    background: rgba(255, 214, 231, 0.2);
+    padding: 0.3em 0.8em;
+    border-radius: 8px;
+}
+
+/* Mochi Bubble */
+.mochi-bubble {
+    background: linear-gradient(135deg, var(--baby-blue), var(--mint-green));
+    border: 3px dashed var(--lavender);
+    border-radius: 20px;
+    padding: 2em;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    animation: bobbing 4s ease-in-out infinite;
+}
+
+.mochi-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 30%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--baby-blue);
+}
+
+/* Progress Bar */
+.progress-stage {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--sakura-pink);
+    text-align: center;
+    padding: 0.5em;
+    background: rgba(255, 214, 231, 0.2);
+    border-radius: 10px;
+}
+
+/* Achievement Badge */
+.achievement-badge {
+    background: linear-gradient(135deg, var(--sakura-pink), var(--peach));
+    color: white;
+    padding: 1.5em;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1em;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    border: 2px solid var(--lavender);
+}
+
+.achievement-badge:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Focus Card */
+.focus-card {
+    background: linear-gradient(135deg, var(--lavender), var(--baby-blue));
+    padding: 1.2em;
+    border-radius: 12px;
+    margin-bottom: 0.8em;
+    border-left: 4px solid var(--sakura-pink);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.focus-card:hover {
+    border-left-width: 6px;
+    transform: translateX(4px);
+}
+
+.focus-card h4 {
+    margin: 0 0 0.5em 0;
+    color: var(--sakura-pink);
+}
+
+/* Sidebar Styles */
+.sidebar-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--sakura-pink);
+    text-align: center;
+    margin-bottom: 1.5em;
+    padding: 1em 0;
+    border-bottom: 2px solid var(--sakura-pink);
+}
+
+.sidebar-footer {
+    text-align: center;
+    padding-top: 2em;
+    border-top: 2px dashed var(--sakura-pink);
+    margin-top: 2em;
+}
+
+/* Buttons */
+[role="button"] {
+    background: linear-gradient(135deg, var(--sakura-pink), var(--peach)) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+[role="button"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(255, 214, 231, 0.4) !important;
+}
+
+/* Forms */
+input {
+    border: 2px solid var(--sakura-pink) !important;
+    border-radius: 10px !important;
+    padding: 0.8em 1em !important;
+    background: var(--cream-white) !important;
+    color: var(--text-dark) !important;
+}
+
+input:focus {
+    border-color: var(--lavender) !important;
+    box-shadow: 0 0 0 3px rgba(230, 214, 255, 0.3) !important;
+}
+
+select {
+    border: 2px solid var(--sakura-pink) !important;
+    border-radius: 10px !important;
+    padding: 0.8em !important;
+    background: var(--cream-white) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes bobbing {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 214, 231, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(255, 214, 231, 0);
+    }
+}
+
+/* Data Tables */
+[role="grid"] {
+    border-collapse: collapse !important;
+}
+
+[role="grid"] th {
+    background: linear-gradient(135deg, var(--sakura-pink), var(--peach)) !important;
+    color: white !important;
+    font-weight: 700 !important;
+    padding: 1em !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+[role="grid"] td {
+    border-bottom: 1px solid var(--border-light) !important;
+    padding: 0.8em 1em !important;
+    color: var(--text-dark) !important;
+}
+
+[role="grid"] tr:hover {
+    background: rgba(255, 214, 231, 0.1) !important;
+}
+
+/* Info/Success Messages */
+.stAlert {
+    border-radius: 15px !important;
+    border-left: 4px solid var(--sakura-pink) !important;
+    padding: 1.2em !important;
+    background: linear-gradient(135deg, rgba(255, 214, 231, 0.1), rgba(230, 214, 255, 0.1)) !important;
+}
+
+/* Expanders */
+.streamlit-expanderHeader {
+    background: linear-gradient(135deg, var(--cream-white), var(--peach)) !important;
+    border-radius: 10px !important;
+    border: 2px solid var(--sakura-pink) !important;
+    margin-bottom: 0.5em !important;
+}
+
+.streamlit-expanderHeader:hover {
+    background: linear-gradient(135deg, var(--peach), var(--baby-blue)) !important;
+}
+
+/* Plotly Charts */
+.plotly-container {
+    filter: drop-shadow(0 4px 15px rgba(255, 214, 231, 0.15));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em !important;
+    }
+    
+    .landing-hero {
+        padding: 2em 1em !important;
+    }
+    
+    .dashboard-widget {
+        padding: 1em !important;
+    }
+    
+    .subject-card {
+        padding: 1em !important;
+    }
+    
+    .mochi-bubble {
+        padding: 1.5em !important;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream-white);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--sakura-pink), var(--lavender));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--lavender), var(--sakura-pink));
+}
+
+/* Print Styles */
+@media print {
+    .stSidebar {
+        display: none !important;
+    }
+    
+    .dashboard-widget:hover {
+        transform: none !important;
+    }
+}
